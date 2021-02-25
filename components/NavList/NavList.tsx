@@ -1,13 +1,19 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
+import { Box } from "@material-ui/core";
+import styles from "./navlist.module.scss";
 
 function NavList() {
   return (
-  <ul>
-    <Link href="/">Home</Link>
-    <Link href="/about">About</Link>
-  </ul>
-  )
+    <>
+      <Box>
+        <Link href="/">
+          <a className={styles.link}>Home</a>
+        </Link>
+        <Link href="/about">About</Link>
+      </Box>
+    </>
+  );
 }
 
-export default NavList
+export default NavList;
